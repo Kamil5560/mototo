@@ -1,6 +1,8 @@
 window._ = require('lodash');
 
 try {
+    window.$ = window.jQuery = require('jquery');
+    window.$wal = require('sweetalert2');
     require('bootstrap');
 } catch (e) {}
 

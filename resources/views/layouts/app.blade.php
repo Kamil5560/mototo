@@ -63,7 +63,8 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
+                                    <a class="dropdown-item" href="{{ route('user.list') }}">Użytkownicy</a>
+                                    <a class="dropdown-item" href="{{ route('cars') }}">Samochody</a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
@@ -79,5 +80,11 @@
             @yield('content')
         </main>
     </div>
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script type="text/javascript">
+        @yield('javascript')
+    </script>
+    @yield('js-files')
 </body>
 </html>

@@ -20,3 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/cars', [App\Http\Controllers\CarsController::class, 'index'])->name('cars')->middleware('auth');
+
+Route::get('/user/list', [App\Http\Controllers\UserController::class, 'index'])->name('user.list')->middleware('auth');
+Route::delete('/user/list/{id}', [App\Http\Controllers\UserController::class, 'destroy'])->middleware('auth');
