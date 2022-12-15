@@ -29,7 +29,7 @@
                                 <td>{{ $user->name }}</td>
                                 <td>{{ $user->email }}</td>
                                 <td>
-                                    <button class="btn btn-danger btn-sm">
+                                    <button class="btn btn-danger btn-sm delete" data-id=" {{ $user->id }}">
                                         X
                                     </button>
                                 </td>
@@ -46,7 +46,7 @@
 @endsection
 
 @section('javascript')
-    const deleteUrl = "{{ url('cars') }}/";
+    const deleteUrl = "{{ url('user/list') }}/";
 @endsection
 @section('js-files')
     <script src="{{ asset('js/delete.js') }}"></script>
