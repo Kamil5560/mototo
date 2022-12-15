@@ -22,9 +22,9 @@
 </div>
 @endsection
 
-{{--@section('javascript')--}}
-{{--    const deleteUrl = "{{ url('cars') }}/";--}}
-{{--@endsection--}}
-{{--@section('js-files')--}}
-{{--    <script src="{{ asset('js/delete.js') }}"></script>--}}
-{{--@endsection--}}
+@section('javascript')
+    const deleteUrl = "{{ url('cars') }}/";
+@endsection
+@section('js-files')
+    <script src="{{ asset('js/delete.js') }}"></script>
+@endsection
